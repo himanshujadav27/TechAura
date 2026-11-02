@@ -1,0 +1,244 @@
+
+/* Promo Section — continuous dark theme */
+.promo-section {
+  padding: 35px 0 75px;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(105, 56, 245, 0.055),
+      transparent 60%
+    ),
+    #080a13;
+}
+
+/* Banner Container */
+.promo-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 45px 45px 45px 55px;
+  border: 1px solid rgba(161, 125, 255, 0.22);
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      ellipse at 85% 50%,
+      rgba(112, 72, 231, 0.32),
+      transparent 42%
+    ),
+    linear-gradient(115deg, #111020, #17132f 60%, #20164a);
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Left Content */
+.promo-content {
+  position: relative;
+  z-index: 2;
+}
+
+.promo-eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 7px 12px;
+  border: 1px solid rgba(177, 147, 255, 0.35);
+  border-radius: 30px;
+  background: rgba(131, 87, 255, 0.12);
+  color: #c5adff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.promo-content h2 {
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: clamp(36px, 4.2vw, 51px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.promo-content h2 span {
+  background: linear-gradient(100deg, #a6aaff, #c7a3ff 55%, #8067ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.promo-description {
+  max-width: 410px;
+  margin-bottom: 25px;
+  color: #d0d1dc;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Button */
+.promo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 0 23px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background: linear-gradient(110deg, #6938f5, #8b42ff);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.promo-button:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(128, 75, 255, 0.3);
+}
+
+.promo-button span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Right Visual */
+.promo-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 290px;
+  isolation: isolate;
+}
+
+.promo-image-glow {
+  position: absolute;
+  z-index: -1;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 66, 255, 0.3),
+    rgba(16, 103, 201, 0.1),
+    transparent 70%
+  );
+  filter: blur(35px);
+  pointer-events: none;
+}
+
+.promo-product-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 330px;
+  max-height: 290px;
+  object-fit: cover; /* Swapped to cover to fill container boundaries smoothly */
+  
+  /* Blends dark/black image backgrounds into the neon background */
+  mix-blend-mode: screen; 
+  
+  /* Radial mask that smoothly dissolves the square border edges into transparency */
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 70%);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 70%);
+  
+  filter: drop-shadow(0 18px 25px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.promo-banner:hover .promo-product-image {
+  transform: scale(1.04) rotate(-2deg);
+}
+
+/* Floating Label */
+.promo-floating-label {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+  background: rgba(22, 18, 49, 0.88);
+  color: #eeeaff;
+  font-size: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.promo-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #a6aaff;
+  box-shadow: 0 0 10px rgba(157, 128, 255, 0.7);
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .promo-banner {
+    padding: 38px 30px;
+  }
+
+  .promo-content {
+    text-align: center;
+  }
+
+  .promo-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-visual {
+    min-height: 260px;
+    margin-top: 15px;
+  }
+
+  .promo-floating-label {
+    right: 8%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .promo-section {
+    padding: 20px 0 50px;
+  }
+
+  .promo-banner {
+    padding: 32px 20px 24px;
+    border-radius: 15px;
+  }
+
+  .promo-content h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .promo-description {
+    font-size: 14px;
+  }
+
+  .promo-visual {
+    min-height: 220px;
+  }
+
+  .promo-product-image {
+    max-height: 220px;
+  }
+
+  .promo-image-glow {
+    width: 180px;
+    height: 180px;
+  }
+
+  .promo-floating-label {
+    right: 0;
+    bottom: 8px;
+  }
+}

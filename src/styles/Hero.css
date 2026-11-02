@@ -1,0 +1,311 @@
+
+/* Main Hero — refined TechAura background */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 78% 65%,
+      rgba(105, 56, 245, 0.25),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 82% 22%,
+      rgba(16, 103, 201, 0.19),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 12% 0%,
+      rgba(105, 56, 245, 0.07),
+      transparent 35%
+    ),
+    #080a13;
+  color: #fff;
+}
+
+.hero-main {
+  padding: 65px 5.5% 55px;
+  min-height: 435px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  color: #c7c3ff;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-size: clamp(54px, 6.2vw, 86px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -4px;
+  margin: 0 0 2px;
+}
+
+.hero-title span {
+  background: linear-gradient(100deg, #a6aaff, #c7a3ff 55%, #8067ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: clamp(23px, 2.5vw, 31px);
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  margin-bottom: 18px;
+}
+
+.hero-description {
+  color: #d0d1dc;
+  font-size: 16px;
+  line-height: 1.85;
+  max-width: 500px;
+  margin-bottom: 27px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.hero-btn-primary {
+  color: #fff;
+  background: linear-gradient(110deg, #6938f5, #8b42ff);
+  box-shadow: 0 5px 24px rgba(105, 56, 245, 0.16);
+}
+
+.hero-btn-primary:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(105, 56, 245, 0.35);
+}
+
+.hero-btn-primary span {
+  font-size: 19px;
+  line-height: 1;
+}
+
+.hero-btn-secondary {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+}
+
+.hero-btn-secondary:hover {
+  color: #fff;
+  border-color: #9d7aff;
+  background: rgba(139, 66, 255, 0.12);
+}
+
+/* Product Visual */
+.hero-visual {
+  min-height: 410px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+.hero-glow-circle {
+  position: absolute;
+  z-index: 0;
+  width: min(78%, 370px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#080a13, #080a13) padding-box,
+    linear-gradient(130deg, #8b65ff, #5edcff, #8447ff) border-box;
+  box-shadow:
+    0 0 25px rgba(83, 139, 255, 0.25),
+    0 0 65px rgba(102, 72, 255, 0.12),
+    inset 0 0 35px rgba(102, 72, 255, 0.12);
+}
+
+/* MODIFIED: Standardized to perfectly match the circle background shape */
+.hero-product-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(78%, 370px); /* Matches the exact width logic of the circle */
+  aspect-ratio: 1; /* Forces a perfect square */
+  border-radius: 50%; /* Cuts the image into a perfect circle */
+  object-fit: cover; /* Prevents stretching/distortion of any uploaded image */
+  transform: scale(
+    1.02
+  ); /* Slight scale up to fully cover the glow borders neatly */
+  filter: drop-shadow(0 22px 35px rgba(79, 53, 189, 0.32));
+}
+
+/* Benefits Strip — bridge between Hero and Products */
+.hero-benefits {
+  position: relative;
+  z-index: 2;
+  padding: 24px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.018),
+    rgba(139, 66, 255, 0.025)
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  height: 100%;
+  min-height: 44px;
+  padding: 5px 12px;
+}
+
+.benefit-icon {
+  color: #a78bff;
+  font-size: 24px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.benefit-item h3 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 4px;
+}
+
+.benefit-item p {
+  color: #b8bac9;
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 991.98px) {
+  .hero-main {
+    padding: 55px 6% 25px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+    margin-top: 25px;
+  }
+
+  .hero-product-image {
+    width: min(110%, 420px);
+    max-height: 350px;
+  }
+
+  .hero-glow-circle {
+    width: min(70%, 290px);
+  }
+
+ .hero-benefits {
+    padding: 22px 0;
+  }
+
+  .benefit-item {
+    justify-content: flex-start;
+    padding: 10px 8px;
+  }
+
+}
+
+@media (max-width: 575.98px) {
+  .hero-main {
+    padding: 45px 5% 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 13vw, 65px);
+    letter-spacing: -2.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: -0.4px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+
+  .hero-visual {
+    min-height: 280px;
+    margin-top: 15px;
+  }
+
+  .hero-product-image {
+    width: min(112%, 340px);
+    max-height: 290px;
+  }
+
+  .hero-glow-circle {
+    width: min(72%, 230px);
+  }
+  .hero-benefits {
+    padding: 16px 0;
+  }
+
+  .benefit-item {
+    gap: 9px;
+    padding: 9px 4px;
+  }
+
+  .benefit-icon {
+    font-size: 20px;
+  }
+
+  .benefit-item h3 {
+    font-size: 12px;
+  }
+
+  .benefit-item p {
+    font-size: 10px;
+  }
+}

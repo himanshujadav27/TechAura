@@ -1,0 +1,60 @@
+
+/* TechAura — Shared Design System */
+:root {
+  --ta-bg: #080a13;
+  --ta-bg-soft: #0d1020;
+  --ta-surface: #111426;
+  --ta-surface-hover: #181b31;
+
+  --ta-purple: #8b42ff;
+  --ta-purple-light: #a6aaff;
+  --ta-purple-soft: #9871ff;
+  --ta-blue: #1067c9;
+
+  --ta-text: #ffffff;
+  --ta-text-secondary: #d0d1dc;
+  --ta-text-muted: #a4a6b7;
+
+  --ta-border: rgba(255, 255, 255, 0.08);
+  --ta-gradient: linear-gradient(110deg, #6938f5, #8b42ff);
+
+  --ta-radius: 16px;
+  --ta-transition: 0.25s ease;
+}
+
+/* Consistent page foundation */
+body {
+  background: var(--ta-bg);
+  color: var(--ta-text);
+  font-family: Arial, sans-serif;
+}
+
+/* Shared section heading treatment */
+.ta-section-heading {
+  color: var(--ta-text);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.ta-section-heading span {
+  background: linear-gradient(100deg, #a6aaff, #c7a3ff 55%, #8067ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Shared surface for content cards */
+.ta-surface {
+  background: var(--ta-surface);
+  border: 1px solid var(--ta-border);
+  border-radius: var(--ta-radius);
+  transition:
+    background var(--ta-transition),
+    border-color var(--ta-transition),
+    transform var(--ta-transition);
+}
+
+.ta-surface:hover {
+  background: var(--ta-surface-hover);
+  border-color: rgba(139, 66, 255, 0.35);
+}
